@@ -1,0 +1,8 @@
+# IntelliJ stuff
+*.iml
+.idea/
+out/
+
+# Java stuff
+*.class
+*.jar
