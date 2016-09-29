@@ -1,5 +1,5 @@
 var types = ["Dragon", "Psychic", "Water", "Fire", "Ghost", "Rock", "Normal", "Electric", "Grass", "Poison", 
-"Flying", "Bug", "Ground", "Fairy", "Fighting", "Steel"];
+"Flying", "Bug", "Ground", "Fairy", "Fighting", "Steel", "Ice", "Dark"];
 
 var pokemonNames = new Array(718);
 pokemonNames[1] = "Bulbasaur";
@@ -112,6 +112,30 @@ pokemonNames[98] = "Krabby";
 pokemonNames[99] = "Kingler";
 pokemonNames[100] = "Voltorb";
 
+pokemonNames[101] = "Electrode";
+pokemonNames[102] = "Exeggcute";
+pokemonNames[103] = "Exeggutor";
+pokemonNames[104] = "Cubone";
+pokemonNames[105] = "Marowak";
+pokemonNames[106] = "Hitmonlee";
+pokemonNames[107] = "Hitmonchan";
+pokemonNames[108] = "Lickitung";
+pokemonNames[109] = "Koffing";
+pokemonNames[110] = "Weezing";
+
+pokemonNames[111] = "Rhyhorn";
+pokemonNames[112] = "Rhydon";
+pokemonNames[113] = "Chansey";
+pokemonNames[114] = "Tangela";
+pokemonNames[115] = "Kangaskhan";
+pokemonNames[116] = "Horsea";
+pokemonNames[117] = "Seadra";
+pokemonNames[118] = "Goldeen";
+pokemonNames[119] = "Seaking";
+pokemonNames[120] = "Staryu";
+
+pokemonNames[121] = "Starmie";
+
 pokemonNames[300] = "Skitty";
 pokemonNames[417] = "Pachirisu";
 pokemonNames[704] = "Goomy";
@@ -121,7 +145,7 @@ pokemonNames[706] = "Goodra";
 var spaceBar = "<br/>";
 var space = " ";
 
-for(var i = 0; i < 16; i++) {
+for(var i = 0; i < 18; i++) {
 	document.write("#" + i + space + types[i] + space); 
 }
 
@@ -141,7 +165,14 @@ for(var a = 1; a < 720; a++) {
 		case 63:
 		case 64:
 		case 65:
+		case 96:
+		case 97:
 		document.write(types[1] + spaceBar);
+		break;
+
+		/* Psychic & Fairy */
+		case 122:
+		document.write(types[1] + space + types[13] + spaceBar);
 		break;
 
 		/* Water */
@@ -154,12 +185,21 @@ for(var a = 1; a < 720; a++) {
 		case 61:
 		case 86:
 		case 90:
-		document.write(types[2] + spaceBar);
+		case 98:
+		case 99:
+		case 116:
+		case 117:
+		case 118:
+		case 119:
+		case 120:
+		case 129:
+			document.write(types[2] + spaceBar);
 		break;
 
 		/* Water & Psychic */
 		case 79:
 		case 80:
+		case 121:
 		document.write(types[2] + space + types[1] + spaceBar);
 		break;
 
@@ -167,6 +207,11 @@ for(var a = 1; a < 720; a++) {
 		case 72:
 		case 73:
 		document.write(types[2] + space + types[9] + spaceBar);
+		break;
+
+		/* Water & Flying */
+		case 130:
+		document.write(types[2] + space + types[10] + spaceBar);
 		break;
 
 		/* Water & Fighting */
@@ -179,6 +224,11 @@ for(var a = 1; a < 720; a++) {
 		document.write(types[2] + space + types[16] + spaceBar);
 		break;
 
+		/* Water & Dark */
+		case 130:
+		document.write(types[2] + space + types[18] + spaceBar);
+		break;
+
 		/* Fire */
 		case 4:
 		case 5:
@@ -188,6 +238,7 @@ for(var a = 1; a < 720; a++) {
 		case 59:
 		case 77:
 		case 78:
+		case 126:
 		document.write(types[3] + spaceBar);
 		break; 
 
@@ -196,12 +247,22 @@ for(var a = 1; a < 720; a++) {
 		document.write(types[3] + space + types[10] + spaceBar);
 		break;
 
+		/* Ghost */
+
+		/* Ghost & Poison */ 
+		case 92:
+		case 93:
+		case 94:
+		document.write(types[4] + space + types[9] + spaceBar);
+		break;
+
 		/* Rock */
 
 		/* Rock & Ground */
 		case 74:
 		case 75:
 		case 76:
+		case 95:
 		document.write(types[5] + space + types[12] + spaceBar);
 		break;
 
@@ -210,6 +271,10 @@ for(var a = 1; a < 720; a++) {
 		case 20:
 		case 52:
 		case 53:
+		case 108:
+		case 113:
+		case 115:
+		case 128:
 		case 300:
 		document.write(types[6] + spaceBar);
 		break;
@@ -235,6 +300,9 @@ for(var a = 1; a < 720; a++) {
 		/* Electric */
 		case 25:
 		case 26:
+		case 100:
+		case 101:
+		case 125:
 		case 417:
 		document.write(types[7] + spaceBar);
 		break;
@@ -246,7 +314,15 @@ for(var a = 1; a < 720; a++) {
 		break;
 
 		/* Grass */
+		case 114:
+		document.write(types[8] + spaceBar);
+		break;
 
+		/* Grass & Psychic */
+		case 102:
+		case 103:
+		document.write(types[8] + space + types[1] + spaceBar);
+		break;
 
 		/* Grass & Poison */
 		case 1: 
@@ -270,6 +346,8 @@ for(var a = 1; a < 720; a++) {
 		case 33:
 		case 88:
 		case 89:
+		case 109:
+		case 110:
 		document.write(types[9] + spaceBar);
 		break;
 
@@ -295,6 +373,7 @@ for(var a = 1; a < 720; a++) {
 		/* Bug */
 		case 10:
 		case 11:
+		case 127:
 		document.write(types[11] + spaceBar);
 		break;
 
@@ -312,6 +391,8 @@ for(var a = 1; a < 720; a++) {
 
 		/* Bug & Flying */
 		case 12:
+		case 123:
+		case 127:
 		document.write(types[11] + space + types[10] + spaceBar);
 		break;
 
@@ -320,7 +401,15 @@ for(var a = 1; a < 720; a++) {
 		case 28:
 		case 50:
 		case 51:
+		case 104:
+		case 105:
 		document.write(types[12] + spaceBar);
+		break;
+
+		/* Ground & Rock*/
+		case 111:
+		case 112:
+		document.write(types[12] + space + types[5] + spaceBar);
 		break;
 
 		/* Fairy */
@@ -335,7 +424,18 @@ for(var a = 1; a < 720; a++) {
 		case 66:
 		case 67:
 		case 68:
+		case 106:
+		case 107:
 		document.write(types[14] + spaceBar);
+		break;
+
+		/* Steel */
+
+		/* Ice */
+		
+		/* Ice & Psychic */
+		case 124:
+		document.write(types[16] + space + types[1] + spaceBar);
 		break;
 
 		default:
