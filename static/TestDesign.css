@@ -1,0 +1,23 @@
+body {
+    /* Margin 0 auto means there are no "spaces" between the border and text on the website*/
+    margin: 0 auto;
+    /* This moves the text a few pixels to the right so that it is "centred"*/
+    max-width: 50em;
+
+    /* This changes the type of font on the text*/
+    font-family: "Helvetica", "Arial", sans-serif;
+
+    /* This adjusts the test length  */
+    line-height: 1.5;
+    /* Creates space between the top and the text below */
+    padding: 4em 1em;
+
+
+}
+
+h2 {
+    /* This fixes the height for header 2*/
+    margin-top: 1em;
+    /* This adjusts the space between header 1 and 2 */
+    padding-top: 1em;
+}
