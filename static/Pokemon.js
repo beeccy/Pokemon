@@ -152,6 +152,11 @@ for(var i = 0; i < 18; i++) {
 document.write(spaceBar + spaceBar);
 
 for(var a = 1; a < 720; a++) {
+	if (pokemonNames[a] == undefined) {
+		document.write("<em>?</em>" + spaceBar);
+		continue;
+	}
+
 	document.write("#" + a + space, pokemonNames[a] + space);
 	switch (a) {
 		/* Dragon */
