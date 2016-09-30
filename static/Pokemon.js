@@ -145,6 +145,24 @@ pokemonNames[706] = "Goodra";
 var spaceBar = "<br/>";
 var space = " ";
 
+function addPokemon() {
+	var nameDiv = document.getElementById("pokemonName").value;
+	console.log(nameDiv);
+
+	var exists = false;
+
+	for(var b = 1; b < 720; b++) {
+		if(nameDiv == pokemonNames[b]) {
+			exists = true;
+			console.log("This Pokemon already exists!");
+		}
+	}
+
+	if (exists == false) {
+		console.log("Added.");
+	}
+}
+
 for(var i = 0; i < 18; i++) {
 	document.write("#" + i + space + types[i] + space); 
 }
